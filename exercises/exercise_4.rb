@@ -21,8 +21,9 @@ store = Store.create(
 
 store = Store.create(
                       name: "Yaletown",
-                      annual_revenue: 190000,
-                      mens_apparel: true
+                      annual_revenue: 430000,
+                      mens_apparel: true,
+                      womens_apparel: true
                     )
 
 puts "There are #{Store.count} stores."
@@ -31,5 +32,11 @@ puts "There are #{Store.count} stores."
 @mens_stores = Store.where("mens_apparel = true")
 
 @mens_stores.find_each do |store| 
+  puts "Store: #{store.name}      Annual Revenue: #{store.annual_revenue}"
+end
+
+@womens_stores = Store.where("womens_apparel = true" && "annual_revenue <= 1000000")
+
+@womens_stores.find_each do |store| 
   puts "Store: #{store.name}      Annual Revenue: #{store.annual_revenue}"
 end
