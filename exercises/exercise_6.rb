@@ -17,7 +17,7 @@ puts "----------"
 @store2.employees.create(first_name: "Roberta", last_name: "Johannes", hourly_rate: 60)
 @store2.employees.create(first_name: "Ali", last_name: "DeSantes", hourly_rate: 160)
 @store4.employees.create(first_name: "Roberta", last_name: "Johannes", hourly_rate: 60)
-@store4.employees.create(first_name: "Barlo", last_name: "vonStinkalot", hourly_rate: 1600)
+@store4.employees.create(first_name: "Barlo", last_name: "Barlo", hourly_rate: 1600)
 @store5.employees.create(first_name: "Jay", last_name: "DiPhillipo", hourly_rate: 60)
 @store5.employees.create(first_name: "Asha", last_name: "Morales", hourly_rate: 160)
 
@@ -28,4 +28,5 @@ store = Store.create(name: "#{@new_store}")
 
 puts store.errors[:name]
 puts store.errors[:annual_revenue]
+puts store.errors[:must_carry_either_mens_or_womens_apparel]
 
