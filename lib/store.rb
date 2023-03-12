@@ -6,7 +6,7 @@ class Store < ActiveRecord::Base
 
   def must_carry_either_mens_or_womens_apparel
     if !mens_apparel.present? && !womens_apparel.present?
-      errors.add(:must_carry_either_mens_or_womens_apparel, "Must sell either men's apparel or women's apparel.")
+      errors.add(:must_carry_either_mens_or_womens_apparel, "must sell either men's apparel or women's apparel.")
     end
   end
 end
