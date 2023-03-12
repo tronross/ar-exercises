@@ -20,3 +20,12 @@ puts "----------"
 @store4.employees.create(first_name: "Barlo", last_name: "vonStinkalot", hourly_rate: 1600)
 @store5.employees.create(first_name: "Jay", last_name: "DiPhillipo", hourly_rate: 60)
 @store5.employees.create(first_name: "Asha", last_name: "Morales", hourly_rate: 160)
+
+puts "Enter a new store name:"
+@new_store = gets.chomp
+
+store = Store.create(name: "#{@new_store}")
+
+puts store.errors[:name]
+puts store.errors[:annual_revenue]
+
